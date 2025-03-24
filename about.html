@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="utf-8">
+    <title>表格</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0 auto;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #CDCD9A	;
+        }
+        tr:nth-child(even) {
+            background-color: #C7C7E2;
+        }
+        td:hover {
+            background-color: #DCB5FF;
+        }
+        img {
+            max-width: 100px;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>自傳</h1>
+    <table>
+        <tr>
+            <th colspan="13">自傳</th>
+        </tr>
+        <tr>
+            <td colspan="4">姓名</td>
+            <td colspan="2">座號</td>
+            <td colspan="2">興趣</td>
+            <td colspan="2">期望薪資</td>
+            <td colspan="2">專長</td>
+            <td colspan="2">經歷</td>
+        </tr>
+        <tr>
+            <td colspan="4">蕭廷叡</td>
+            <td colspan="2">30</td>
+            <td colspan="2">觀察榮陞</td>
+            <td colspan="2">999999999999999999</td>
+            <td colspan="2">拍馬屁, 睡覺, 摸魚</td>
+            <td colspan="2">3歲時擔任中華民國總統, 在任期內攻陷北京, 斬殺習近平, 收復大陸地區</td>
+        </tr>
+        <tr>
+            <td colspan="2">身高</td>
+            <td colspan="2">體重</td>
+            <td colspan="2">提款卡密碼</td>
+            <td>學歷</td>
+            <td colspan="12">自我介紹</td>
+        </tr>
+        <tr>
+            <td colspan="2">約0.83榮陞</td>
+            <td colspan="2">約0.5榮陞</td>
+            <td colspan="2">問榮陞</td>
+            <td>小於榮陞</td>
+            <td colspan="12">
+我的願景是建構一個更加公正、繁榮和具有長遠發展的社會。在當前複雜的時代，面對挑戰需要勇氣、創新和強大的領導能力，而我有信心帶領國家走向未來的曙光。
+
+我承諾會以透明、負責的態度，尊重每位公民的意願，並與各界共同努力解決當前面臨的問題，如經濟發展、教育改革、社會福利和環境保護。
+
+這是一段承諾與使命，我希望能在這個舞台上為每個人的利益貢獻自己的力量。</td>
+        </tr>
+    </table>
+<audio id="hiddenAudio" >
+        <source src="音樂.mp3" type="audio/mpeg">
+        您的瀏覽器不支援音頻播放。
+    </audio>
+
+    <script>
+        // 嘗試在頁面加載後自動播放音樂
+        document.addEventListener('DOMContentLoaded', () => {
+            const audio = document.getElementById('hiddenAudio');
+            audio.play().catch(error => {
+                console.warn("自動播放被阻止。用戶需要互動來啟動音樂播放。", error);
+            });
+        });
+    </script>
+	<button onclick="document.getElementById('hiddenAudio').play()">點擊播放音樂</button>
+</body>
+</html>

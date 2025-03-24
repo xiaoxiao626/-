@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+	<meta charset="utf-8">
+	<title>自我介紹</title>
+</head>
+<style>
+  #backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+</style>
+
+  <style>
+    /* 設置按鈕樣式 */
+    #backToTop {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: none;
+      background-color: ;
+      color: white;
+      padding: 20px 25px;
+      border: none;
+      border-radius: 5px;
+      font-size: 20px;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    }
+
+    #backToTop:hover {
+      background-color: #45a049;
+    }
+  </style>
+  <!-- 回到頁首按鈕 -->
+  <button id="backToTop" onclick="scrollToTop()">回到頁首</button>
+
+  <script>
+    const backToTopButton = document.getElementById('backToTop');
+
+    // 監控滾動事件
+    window.onscroll = function() {
+      // 如果滾動超過 200px，顯示按鈕
+      if (window.scrollY > 200) {
+        backToTopButton.style.display = 'block';
+      } else {
+        backToTopButton.style.display = 'none';
+      }
+    };
+
+    // 平滑滾動回頁首
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // 一直保持監控
+    setInterval(() => {
+      console.log('正在監控滾動行為');
+    }, 1000); // 每秒輸出一次訊息，確保功能一直有效
+  </script>
+<style>
+	#標題 {color: brown;
+text-align: center}
+	#sin {color: green;
+text-align: center}
+	#cos {color: green;
+text-align: center}
+	#tan {color: green;
+text-align: center}
+	#alpha {color: green;
+text-align: center}
+	#beta {color: green;
+text-align: center}
+	#下拉式選單 {color: green;
+text-align: center}
+</style>
+<style>
+table, th, td {
+  border:0.2px solid black;
+}
+</style>
+<style>
+		/* 固定的容器樣式 */
+        .fixed-header {
+            position: fixed; /* 固定位置 */
+            top: 0; /* 固定到頁面頂部 */
+            left: 0;
+            width: 100%; /* 寬度填滿頁面 */
+            background-color: #4CAF50; /* 背景顏色 */
+            padding: 10px;
+            text-align: center;
+            z-index: 1000; /* 確保它位於其他內容上方 */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* 添加陰影效果 */
+        }
+
+        /* 下方內容 */
+        .content {
+            margin-top: 60px; /* 留出固定選單的高度空間 */
+            padding: 20px;
+            font-size: 18px;
+        }
+        /* 美化選單容器 */
+        select {
+            width: 111px;
+            padding: 10px;
+            border: 2px solid #4CAF50;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            color: #333;
+            font-size: 16px;
+            appearance: none; /* 隱藏原生的箭頭樣式 */
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            cursor: pointer;
+        }
+
+        /* 添加一個自訂的箭頭 */
+        select:after {
+            content: '▼';
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        /* 選項樣式 */
+        option {
+            padding: 10px;
+            background: #ffffff;
+            color: #000;
+        }
+
+        /* 選中時的樣式 */
+        select:focus {
+            outline: none;
+            border-color: #007BFF;
+        }
+    </style>
+	<style>
+        body {
+            background-image: url('../pic/自我介紹底圖.PNG'); /* 圖片路徑 */
+            background-size: cover; /* 圖片填滿頁面 */
+            background-repeat: no-repeat; /* 防止圖片重複 */
+            background-position: center; /* 圖片置中 */
+        }
+    </style>
+<body>
+<select id="下拉式選單" onchange="window.open(this.value, '_blank')">
+        <option value="">主頁</option>
+		<option value="首頁.html">回主頁</option>
+    </select>
+	<select id="下拉式選單" onchange="window.open(this.value, '_blank')">
+        <option value="">推銷</option>
+		<option value="https://cn.pornhub.com">推銷</option>
+		 
+    </select>
+<h1>自我介紹</h1>
+<table style="width:50%" style="height:500px;">
+	<tr>
+		<th>姓名</th>
+		<th>葉定洋</th>
+	</tr>
+	
+	<tr>
+		<th>暱稱</th>
+		<th>南山王世堅/(名稱載入錯誤)</th>
+	</tr>
+	
+	<tr>
+		<th>班級</th>
+		<th>國401班</th>
+	</tr>
+	
+	<tr>
+		<th>興趣</th>
+		<th>拍__片and改寫(泛指致使不良的)歌詞</th>
+	</tr>
+	
+	<tr>
+		<th>專長</th>
+		<th>研究一些冷門但很廣泛的東西</th>
+	</tr>
+	
+	<tr>
+		<th>身高</th>
+		<th>小於1榮陞</th>
+	</tr>
+	
+	<tr>
+		<th>體重</th>
+		<th>小於1榮陞</th>
+	</tr>
+	
+	<tr>
+		<th>智商</th>
+		<th>小於1榮陞</th>
+	</tr>
+	
+	<tr>
+		<th>學歷</th>
+		<th>中國 臺灣特別行政區 臺北縣 榮陞中學</th>
+	</tr>
+	
+	<tr>
+		<th>身分證字號</th>
+		<th>X1XXXXXXXX</th>
+	</tr>
+	
+	<tr>
+		<th>住家地址</th>
+		<th>中華人民共和國 臺灣特別行政區 臺北縣XX市XX路XX巷XX號XX樓</th>
+	</tr>
+	
+	<tr>
+		<th>照片</th>
+		<th><img src="低清照片/5.jpg" alt="圖片載入錯誤" width="150"></th>
+	</tr>
+</table>
+<h2></h2>
+<p><h2>更多低清照片</h2>
+<img src="低清照片/1.jpg" alt="圖片載入錯誤" width="100">
+<img src="低清照片/2.jpg" alt="圖片載入錯誤" width="100">
+<img src="低清照片/3.jpg" alt="圖片載入錯誤" width="100">
+<img src="低清照片/4.jpg" alt="圖片載入錯誤" width="100">
+<img src="低清照片/6.jpg" alt="圖片載入錯誤" width="100"></p>
+
+<p><h2>我是一位來自中華人民共和國 臺灣特別行政區 臺北縣的人</h2>
+<h2>來榮陞中學的目的是為了目睹國中部教學組組長-榮陞 的英俊身影</h2>
+<h2>我在榮陞中學認識了南山F4:榮陞、趙奕、宇翔、框哥(斯平老師不能直稱，藉框哥代替)</h2>
+<h2>我出401而不染,濯趙奕而不妖;中通外直,不蔓不枝;香遠益清,亭亭淨植,可遠觀而不可褻玩焉</h2>
+<h2>我最相信的名言佳句:人們之間,有福同享,有難他當 這是一句非常合理的話</h2>
+<h2>在日常生活中,我也善用此名句 並用的淋漓盡致,我覺得我相當優秀</h2>
+<h2>我這次將參選中華人民共和國 臺灣特別行政區 區域主席</h2>
+<h2>請各位將神聖的票投給2號:王世堅</h2>
+<h2>讓我們使臺灣特別行政區更進一步 反攻大陸 統一中國</h2></p>
+</body>
+</html>

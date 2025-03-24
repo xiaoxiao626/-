@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Menu with Gradients</title>
+    <link rel="stylesheet" href="0.css">
+</head>
+<body bgcolor="yellow">
+<h1 class="dick">你被騙了!</h1>
+
+<audio id="hiddenAudio" loop >
+        <source src="音樂.mp3" type="audio/mpeg">
+        您的瀏覽器不支援音頻播放。
+    </audio>
+
+    <script>
+        // 嘗試在頁面加載後自動播放音樂
+        document.addEventListener('DOMContentLoaded', () => {
+            const audio = document.getElementById('hiddenAudio');
+            audio.play().catch(error => {
+                console.warn("自動播放被阻止。用戶需要互動來啟動音樂播放。", error);
+            });
+        });
+    </script>
+	<button onclick="document.getElementById('hiddenAudio').play()">點擊播放音樂</button>
+</body>
+</html>

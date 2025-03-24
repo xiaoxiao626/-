@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>水力發電案例</title>
+<style>
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+body {
+font-family: Arial, sans-serif;
+display: flex;
+height: 100vh;
+}
+
+/* 右邊選單 */
+.menu {
+width: 220px;
+background: #2c3e50;
+color: white;
+padding: 20px;
+}
+
+.menu button {
+display: block;
+width: 100%;
+padding: 12px;
+margin: 8px 0;
+background: #34495e;
+color: white;
+border: none;
+cursor: pointer;
+text-align: left;
+font-size: 16px;
+}
+
+.menu button:hover {
+background: #1abc9c;
+}
+
+/* 左邊內容區 */
+.content {
+flex: 1;
+padding: 20px;
+background: #ecf0f1;
+overflow-y: auto;
+}
+
+.section {
+display: none;
+text-align: center;
+}
+
+.active {
+display: block;
+}
+
+.section img {
+width: 100%;
+max-width: 600px;
+height: auto;
+border-radius: 8px;
+margin: 10px 0;
+}
+
+.section h2 {
+margin: 10px 0;
+color: #2c3e50;
+}
+
+.section p {
+font-size: 16px;
+color: #555;
+max-width: 700px;
+margin: 10px auto;
+line-height: 1.6;
+text-align: justify;
+}
+</style>
+</head>
+<body>
+
+<!-- 右邊選單 -->
+<div class="menu">
+<button onclick="showSection('section1')">日月潭水力發電廠</button>
+<button onclick="showSection('section2')">三峽大壩</button>
+<button onclick="showSection('section3')">伊泰普水電站</button>
+<button onclick="showSection('section4')">胡佛水壩</button>
+<button onclick="showSection('section5')">大古力水壩</button>
+</div>
+
+<!-- 左邊內容區 -->
+<div class="content">
+<div id="section1" class="section active">
+<h2>日月潭水力發電廠</h2>
+<img src="https://upload.wikimedia.org/wikipedia/commons/d/dd/LAKE_JITSUGETSUTAN.jpg" alt="日月潭水力發電廠">
+<p>
+日月潭水力發電廠位於台灣南投縣，是台灣最重要的水力發電設施之一，屬於台灣電力公司。
+主要由明潭與大觀電廠組成，利用水庫的高低落差進行抽蓄發電，每年可提供大量清潔能源。
+除了發電功能外，這裡也是著名的旅遊勝地，每年吸引眾多遊客來欣賞日月潭的美景。
+</p>
+</div>
+<div id="section2" class="section">
+<h2>三峽大壩</h2>
+<img src="https://media.nownews.com/nn_media/thumbnail/2020/06/1592895983579-37f4101e8bc94760b0ce6620605788f1-800x449.jpg" alt="三峽大壩">
+<p>
+三峽大壩位於中國湖北省宜昌市，是世界上裝機容量最大的水力發電廠，發電容量高達 22,500 兆瓦。
+這座大壩主要負責發電、防洪與改善長江航運，每年可供應中國東部和中部地區大量電力。
+其建設規模巨大，影響深遠，但也曾引發關於環境影響與生態保護的廣泛討論。
+</p>
+</div>
+<div id="section3" class="section">
+<h2>伊泰普水電站</h2>
+<img src="https://t3.ftcdn.net/jpg/03/45/36/18/360_F_345361879_pAsuYE1IRIyLb2rviYfUpgIWapaVLmV0.jpg" alt="伊泰普水電站">
+<p>
+伊泰普水電站位於巴西與巴拉圭交界的巴拉那河上，是全球第二大水力發電廠，發電容量達 14,000 兆瓦。
+每年發電量超過 1030 億度，為巴西和巴拉圭提供關鍵能源。
+這座大壩的建設促進了兩國的經濟發展，也成為世界水電開發的重要案例。
+</p>
+</div>
+<div id="section4" class="section">
+<h2>胡佛水壩</h2>
+<img src="https://upload.wikimedia.org/wikipedia/commons/c/c8/2017_Aerial_view_Hoover_Dam_4774.jpg" alt="胡佛水壩">
+<p>
+胡佛水壩橫跨美國內華達州與亞利桑那州交界的科羅拉多河，是美國最具代表性的水壩之一。
+它於 1936 年完工，發電容量約為 2080 兆瓦，為美國西南部供應電力。
+這座水壩除了發電功能外，還負責供水、防洪與灌溉，並已成為世界著名的旅遊景點。
+</p>
+</div>
+<div id="section5" class="section">
+<h2>大古力水壩</h2>
+<img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Grand_Coulee_Dam.jpg" alt="大古力水壩">
+<p>
+大古力水壩位於美國華盛頓州哥倫比亞河上，是美國最大的水力發電站，發電容量高達 6,809 兆瓦。
+它自 1942 年起運行，不僅提供電力，還支援灌溉系統，促進美國西北部的農業發展。
+大古力水壩的發電量能滿足整個太平洋西北地區的能源需求，是美國最重要的水力發電設施之一。
+</p>
+</div>
+</div>
+
+<script>
+function showSection(sectionId) {
+document.querySelectorAll('.section').forEach(section => {
+section.classList.remove('active');
+});
+
+document.getElementById(sectionId).classList.add('active');
+}
+</script>
+
+</body>
+</html>

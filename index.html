@@ -1,0 +1,117 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>di er zu-sui li fa dian</title>
+  <style>
+    /* 炫酷背景 */
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    }
+
+    .container {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* 玻璃擬態 + 霓虹光效 */
+    .zoom-box {
+      width: 333px;
+      height: 275px;
+      overflow: hidden;
+      position: relative;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(10px);
+      border-radius: 15px;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 26px;
+      text-align: center;
+      flex-direction: column;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    /* 懸停時增加霓虹炫光 */
+    .zoom-box:hover {
+      transform: scale(1.2);
+      box-shadow: 0 0 20px #00d4ff, 0 0 40px #007bff;
+    }
+
+    /* 附加文字顯示效果 */
+    .extra-text {
+      position: absolute;
+      width: 100%;
+      bottom: 10px;
+      left: 0;
+      font-size: 20px;
+      color: white;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .zoom-box:hover .extra-text {
+      opacity: 1;
+    }
+
+    .extra-text-top {
+      top: 10px;
+      bottom: unset;
+    }
+
+    /* 低調霓虹按鈕 */
+    .button {
+      padding: 10px 20px;
+      background: #1a1f3b; /* 深藍色，降低亮度 */
+      color: #bbb; /* 讓文字變灰，不影響視覺 */
+      border: none;
+      border-radius: 25px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: 0.3s;
+      margin-top: 20px;
+      opacity: 0;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: none;
+    }
+
+    .zoom-box:hover .button {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+
+    .button:hover {
+      background: #003366; /* 懸停時變深藍 */
+      box-shadow: 0 0 15px #007bff;
+      color: white;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="zoom-box">
+      Welcome
+      <div class="extra-text extra-text-top">第2組報告</div>
+      <div class="extra-text">水力發電</div>
+      <a href="介紹.html" class="button">進入報告1</a>
+	  <a href="介紹 - 複製.html" class="button">進入報告2</a>
+    </div>
+  </div>
+
+</body>
+</html>

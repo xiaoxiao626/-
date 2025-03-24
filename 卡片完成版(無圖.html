@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>水力發電的優缺點</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #74ABE2, #5563DE);
+      min-height: 100vh;
+      padding: 20px;
+      text-align: center;
+      color: #333;
+    }
+    h1 {
+      margin: 20px 0 40px;
+      font-size: 2.5em;
+      color: #fff;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    }
+    .cards-container {
+      width: 80%;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 30px;
+      height: calc(100vh - 140px);
+    }
+    .card {
+      width: 100%;
+      height: 100%;
+      perspective: 1000px;
+      position: relative;
+    }
+    .card-inner {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 0.8s cubic-bezier(0.4, 0.2, 0.2, 1);
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      border-radius: 15px;
+    }
+    .card-inner.flipped {
+      transform: rotateY(180deg);
+    }
+    .card-front, .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 15px;
+      backface-visibility: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #fff;
+    }
+    .card-front {
+      background: #ffffff;
+      color: #333;
+    }
+    .card-back {
+      transform: rotateY(180deg);
+      font-size: 1.2em;
+      line-height: 1.4;
+    }
+    /* 不同類型的卡片顏色 */
+    .good-front { background: #4CAF50; } /* 優點 */
+    .bad-front { background: #E53935; }  /* 缺點 */
+    .good-back { background: #66BB6A; }  /* 優點反面 */
+    .bad-back { background: #EF5350; }   /* 缺點反面 */
+  </style>
+</head>
+<body>
+
+  <h1>水力發電的優缺點</h1>
+  <div class="cards-container" id="cardsContainer"></div>
+
+  <script>
+    const data = [
+      { title: "清潔能源", content: "水力發電在運作過程中不會產生空氣污染物或溫室氣體排放，因此被視為環保的發電方式。", type: "good" },
+      { title: "運營成本低且穩定", content: "水力發電不需要燃料，運行自動化程度高，所需人力少，因此運營成本低。此外，水力發電的成本不受燃料價格波動影響，具有長期穩定性。", type: "good" },
+      { title: "生態環境影響", content: "興建水壩可能會導致河流生態系統的改變，影響魚類遷徙路線，並可能淹沒大片土地，對當地生態環境造成負面影響。", type: "bad" },
+      { title: "地理限制", content: "水力發電需要特定的地理條件，如足夠的水流和落差，因此並非所有地區都適合建設水力發電設施。", type: "bad" }
+    ];
+
+    const container = document.getElementById("cardsContainer");
+
+    function createCard(item) {
+      const card = document.createElement("div");
+      card.className = "card";
+      card.innerHTML = `
+        <div class="card-inner">
+          <div class="card-front ${item.type}-front">
+            <p>${item.title}</p>
+          </div>
+          <div class="card-back ${item.type}-back">
+            <p>${item.content}</p>
+          </div>
+        </div>
+      `;
+      container.appendChild(card);
+    }
+
+    data.forEach(createCard);
+
+    document.querySelectorAll('.card-inner').forEach(card => {
+      card.addEventListener('click', () => {
+        card.classList.toggle('flipped');
+      });
+    });
+  </script>
+
+</body>
+</html>
